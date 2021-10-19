@@ -269,8 +269,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disparoPrefabs:
   - {fileID: 6069591108688275345, guid: 4a4d086f6891dc44abbf9bb57f5450a4, type: 3}
-  startDelay: 1
-  spawnInterval: 1
+  startDelay: 0
+  spawnInterval: 0
+  scale: {x: 12, y: 0, z: 0}
 --- !u!4 &314758952
 Transform:
   m_ObjectHideFlags: 0
@@ -614,13 +615,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842779062}
-  m_LocalRotation: {x: -0.0036500052, y: 0.99033654, z: -0.09050127, w: -0.10502283}
-  m_LocalPosition: {x: 7.71, y: 14.95, z: 40.47}
+  m_LocalRotation: {x: -0.06168028, y: 0.019474536, z: -0.0012037162, w: -0.9979052}
+  m_LocalPosition: {x: 20, y: 43.5, z: -246.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 10.371, y: 192.169, z: 0.686}
+  m_LocalEulerAnglesHint: {x: 7.074, y: 357.764, z: 0}
 --- !u!1 &1691979421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100008, guid: 289d7adfdb215274a998219ee10218ad, type: 3}
@@ -749,8 +750,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disparoPrefabs:
   - {fileID: 6069591108688275345, guid: 4a4d086f6891dc44abbf9bb57f5450a4, type: 3}
-  startDelay: 1
-  spawnInterval: 1
+  startDelay: 0
+  spawnInterval: 0
+  scale: {x: 12, y: 0, z: 0}
 --- !u!4 &1985855026
 Transform:
   m_ObjectHideFlags: 0

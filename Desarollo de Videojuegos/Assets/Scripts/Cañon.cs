@@ -9,7 +9,7 @@ public class Cañon : MonoBehaviour
     public GameObject[] disparoPrefabs;
     public float startDelay = 2;
     public float spawnInterval = 1.5f;
-
+    public Vector3 scale;
     void Start()
     {
         //Instantiate(enemyPrefab, transform);
@@ -24,7 +24,17 @@ public class Cañon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButton("Fire1"))
+        {
+            Disparo();
+        }
 
+        //if (Input.GetKeyDown(KeyCode.W))
+       // {
+        //    transform.localScale = Scale;
+        //}
+
+  
     }
 
     void Disparo()
@@ -32,5 +42,5 @@ public class Cañon : MonoBehaviour
         int disparoIndex = Random.Range(0, disparoPrefabs.Length);
         Instantiate(disparoPrefabs[disparoIndex], transform.position, disparoPrefabs[disparoIndex].transform.rotation);
     }
-
+  
 }

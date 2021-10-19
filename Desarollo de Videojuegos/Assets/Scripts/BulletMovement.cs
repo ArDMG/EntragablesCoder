@@ -11,7 +11,7 @@ public class BulletMovement : MonoBehaviour
     private int life = 1;
     public float Speed;
     public int Damage;
-    
+    public float liveCanon = 1f;
 
 
 
@@ -23,10 +23,21 @@ public class BulletMovement : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
+    {
+        Debug.Log("Bullet Move");
+        transform.position += new Vector3(0f, 0f, 0.01f) * Speed;
+    
+        liveCanon -= Time.deltaTime;
+        if (liveCanon < 0)
         {
-         Debug.Log("Bullet Move");
-         transform.position += new Vector3(0f, 0f, 0.01f) * Speed;
+            Destroy(gameObject);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            transform.localScale = new Vector3(2f,2f,2f);
+        }
+    }
     void MoveBullet()
     {
         //Move
@@ -44,4 +55,3 @@ public class BulletMovement : MonoBehaviour
         //Debug.Log("Ship Total Lifes: " + life);
     }
 }
-
