@@ -5,30 +5,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public int lifePlayer = 3;
-    public string namePlayer = "Space Invader";
-    private float speedPlayer = 100.0f;
-    public Vector3 scale;
-    public Vector3 position;
-    public float initialSpeedPlayer;
+    public string namePlayer = "Mr. Blue";
+    public float speedPlayer = 1f;
+    public Vector3 initPosition = new Vector3(4, 2, 1);
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Invader Start");
-        Debug.Log("Invader Start Position: " + transform.position.x);
-        transform.localScale = scale;
-        transform.position = position;
-        speedPlayer = initialSpeedPlayer;
-        Debug.Assert(lifePlayer > 0);
-        Debug.Log("Invader Lifes: " + lifePlayer) ;
-       // Debug.Break();
+      
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        Debug.Log("Invader Move");
-        transform.position += new Vector3(0f, 0.1f, 0f) * initialSpeedPlayer;
-        Debug.Log("Invader Position: " + transform.position);
+   
 
+    private void Move()
+    {
+        float ejeHorizontal = Input.GetAxisRaw("Horizontal");
+        float ejeVertical = Input.GetAxisRaw("Vertical");
+        transform.Translate(speedPlayer * Time.deltaTime * new Vector3(ejeHorizontal, 0, ejeVertical));
     }
 }
