@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-     
+
     private float initialSpeed = 0f;
     public Vector3 scale;
     public Vector3 position;
@@ -13,12 +13,10 @@ public class BulletMovement : MonoBehaviour
     public int Damage;
     public float liveCanon = 1f;
 
-
-
     // Start is called before the first frame update
     void Start()
-    { 
-      
+    {
+
 
     }
     // Update is called once per frame
@@ -26,7 +24,7 @@ public class BulletMovement : MonoBehaviour
     {
         Debug.Log("Bullet Move");
         transform.position += new Vector3(0f, 0f, 0.01f) * Speed;
-    
+
         liveCanon -= Time.deltaTime;
         if (liveCanon < 0)
         {
@@ -35,8 +33,10 @@ public class BulletMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            transform.localScale = new Vector3(2f,2f,2f);
+            transform.localScale = new Vector3(2f, 2f, 2f);
         }
+        
+
     }
     void MoveBullet()
     {

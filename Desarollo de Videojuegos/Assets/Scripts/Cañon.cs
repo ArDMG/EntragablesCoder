@@ -10,14 +10,9 @@ public class Cañon : MonoBehaviour
     public float startDelay = 2;
     public float spawnInterval = 1.5f;
     public Vector3 scale;
+  
     void Start()
     {
-        //Instantiate(enemyPrefab, transform);
-        //Instantiate(enemyPrefab, transform.position, enemyPrefab.transform.rotation);
-        //Debug.Log(Quaternion.identity);
-        //Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-        //int enemyIndex = Random.Range(0, enemyPrefabs.Length);
-        //Instantiate(enemyPrefabs[enemyIndex], transform.position, enemyPrefabs[enemyIndex].transform.rotation);
         InvokeRepeating("Disparo", startDelay, spawnInterval);
     }
 
@@ -28,13 +23,7 @@ public class Cañon : MonoBehaviour
         {
             Disparo();
         }
-
-        //if (Input.GetKeyDown(KeyCode.W))
-       // {
-        //    transform.localScale = Scale;
-        //}
-
-  
+        
     }
 
     void Disparo()
@@ -42,5 +31,5 @@ public class Cañon : MonoBehaviour
         int disparoIndex = Random.Range(0, disparoPrefabs.Length);
         Instantiate(disparoPrefabs[disparoIndex], transform.position, disparoPrefabs[disparoIndex].transform.rotation);
     }
-  
+ 
 }
